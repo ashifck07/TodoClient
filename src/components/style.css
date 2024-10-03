@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+    --primary: #D81E5B;
+    --light: #EEE;
+    --light-alt: #61759b;
+    --dark: #131A26;
+   }
+   
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+   }
+   
+   body {
+    background: linear-gradient(0deg, rgba(5,36,62,1) 5%, rgba(18,83,170,1) 85%);
+    color:#05243E;
+   }
+   
+   .container {
+     max-width: 20rem;
+     padding: 25px 25px 35px 25px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+     background-color:#fff;
+     border-radius: 15px;
+
+   }
+   
+   .heading{
+     text-align: center;
+    }
+
+    .heading h1{
+
+      font-family:'Inter';
+      font-weight: 800;
+      display: flex;
+      flex-direction: column;
+
+    }
+    .head{
+      font-weight: 500;
+      font-size: 25px;
+    }
+    
+   .form{
+     display: flex;
+   }
+   
+   .form input {
+     width: 85%;
+     padding: 5px;
+     border-radius: 5px 0px 0px 5px;
+     border: 1px solid gray;
+   }
+   .link:hover{
+    color: #131A26;
+   }
+   .link{
+    text-decoration: none;
+    font-family: 'Inter';
+    color: gray;
+   }
+   .list{
+    list-style: none;
+   }
+   .completed{
+    width: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+  
+  .underline{
+    text-decoration:underline;
+  }
+  .active{
+    text-decoration: none;
+  }
+   
+   .form button {
+    border: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #587dc1;
+    color: white;
+    font-weight: 600;
+   }
+   
+   .todo {
+     padding: 10px;
+     border-radius: 5px;
+     display: grid;
+     grid-template-columns: 3fr 0.3fr;
+     transition: 0.5s;
+     cursor: pointer;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .check:hover{
+    border-bottom: 4px solid #50DD8E;
+   }
+   .unCheck:hover{
+    border-bottom: 3px solid yellow;
+   }
+   .checkbox{
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     background-color: var(--light);
+     transition: 0.4s;
+   }
+  
+   .todolist{
+    height: 216px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   }
+
+   ::-webkit-scrollbar
+   {
+    display: none;
+   }
+   
+    .box{
+      width: 20px;
+      height: 20px;
+
+    }
+   
+   
+   .delete-todo {
+     display: flex;
+     justify-content: center;
+     align-items: center; 
+   }
+.hide{
+  display: none;
+}
+
