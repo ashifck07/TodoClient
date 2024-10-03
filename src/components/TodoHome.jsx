@@ -6,7 +6,8 @@ import "./style.css";
 import CompletedItem from "./CompletedItem";
 import InCompletedItem from "./InCompletedItem";
 
-const API_BASE = "http://13.235.243.141/:4001/todo";
+// const API_BASE = "http://localhost:4001/todo";
+const API_BASE = "http://13.235.243.141:4001/todo";
 
 
 const TodoHome = () => {

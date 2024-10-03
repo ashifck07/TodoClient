@@ -4,7 +4,7 @@ import "./style.css";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
-const API_BASE = "http://13.235.243.141/:4001/todo";
+const API_BASE = "http://13.235.243.141:4001/todo";
 
 const TodoItems = ({ item=[], setItems }) => {
   const { name, _id, isCompleted } = item;
