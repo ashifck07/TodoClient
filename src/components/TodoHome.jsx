@@ -5,10 +5,11 @@ import { Link, Routes, Route, useLocation } from "react-router-dom";
 import "./style.css";
 import CompletedItem from "./CompletedItem";
 import InCompletedItem from "./InCompletedItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 // const API_BASE = "http://localhost:4001/todo";
 const API_BASE = "http://13.235.243.141:4001/todo";
-
 
 const TodoHome = () => {
   const [items, setItems] = useState([]);
@@ -94,8 +95,7 @@ const TodoHome = () => {
           />
           <Route
             path="/completed"
-            element={
-            <CompletedItem items={items} setItems={setItems} />}
+            element={<CompletedItem items={items} setItems={setItems} />}
           />
           <Route
             path="/incomplete"
@@ -103,9 +103,19 @@ const TodoHome = () => {
           />
         </Routes>
       </div>
+      {location.pathname === "/" && items.length > 4 && (
+        <FontAwesomeIcon icon={faAngleDown} />
+      )}
+      {location.pathname === "/completed" &&
+        items.filter((item) => item.isCompleted).length > 4 && (
+          <FontAwesomeIcon icon={faAngleDown} />
+        )}
+      {location.pathname === "/incomplete" &&
+        items.filter((item) => !item.isCompleted).length > 5 && (
+          <FontAwesomeIcon icon={faAngleDown} />
+        )}
     </div>
   );
 };
 
 export default TodoHome;
-

@@ -1,5 +1,5 @@
 import React from 'react'
-import TodoItems from './TodoItems'
+import TodoItems from './TodoItems';
 
 const CompletedItem = ({items = [],setItems}) => {
   return (
@@ -10,7 +10,6 @@ const CompletedItem = ({items = [],setItems}) => {
                 <TodoItems key={item._id} item={item} setItems={setItems} />
               ))
             }
-        
     </>
   )
 }
